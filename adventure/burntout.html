@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Burnt. Out. - Software Apophenia</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A book of lessons from my time working in the software industry">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Choose your own adventure</li><li class="chapter-item expanded "><a href="../adventure/start.html"><strong aria-hidden="true">1.</strong> Start the adventure</a></li><li class="chapter-item expanded "><a href="../adventure/burntout.html" class="active"><strong aria-hidden="true">2.</strong> Burnt. Out.</a></li><li class="chapter-item expanded "><a href="../adventure/focus_on_ops.html"><strong aria-hidden="true">3.</strong> Focus on Ops health</a></li><li class="chapter-item expanded "><a href="../adventure/focus_on_future.html"><strong aria-hidden="true">4.</strong> Focus on new development</a></li><li class="chapter-item expanded "><a href="../adventure/hero_mode.html"><strong aria-hidden="true">5.</strong> Keep on keeping on</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="../definitions/summary.html"><strong aria-hidden="true">6.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Coaching and Mentoring</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Speak the same lingo and become predictable</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Get Shit Done</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Understand the business</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Make things better</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Lookout!</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Grit</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Meta</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> Software</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Scratch</li><li class="chapter-item expanded "><a href="../dragons.html"><strong aria-hidden="true">16.</strong> Here be dragons 🐲</a></li><li class="chapter-item expanded "><a href="../mudmap.html"><strong aria-hidden="true">17.</strong> Mud map</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Research material</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Software Apophenia</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="burnt-out"><a class="header" href="#burnt-out">Burnt. Out.</a></h1>
+<p>&quot;I...I...I think...I don't know..&quot; Lucas sheepishly replies. A moment passes as the competing priorities racing through his mind become an intertwined soup of ideas, frustrations, and micro-needs all seemingly unworthy of diving into at this moment. Dean continues staring ahead, focused on the dogs across the road chasing a well weathered red ball thrown by one of the owners. Lucas - blinded by his own racing mind, undoubtedly now jet-fueled by caffeine - is abnormally lost for words. The right words at least; for this moment.</p>
+<p>Lucas is well known for thinking through endless permutations of scenarios and putting in place back-up plans to back-up plans. His words carry more weight with his team than he ever takes the time to acknowledge or notice, and he appears to always have the answer ready for the next question that will be asked. Countless times this has made him invaluable to managers seeking quick answers, and to other engineers struggling through painful operational events. Lucas is sure there is nothing unique about this ability; it is the result of relentless hard work to grow, improve, and be prepared for the unknown. Lately he has noticed however, that the payoff for the time spent being 'two steps ahead' is diminishing, and the more he learns, the slower he has become to respond with action when it is needed.</p>
+<p>&quot;gahh...Hicks law&quot; Lucas mutters as he shakes his head in disappointment at his inability to string together a coherent and actionable response for Dean. Dean turns his head and looks puzzeldly at Lucas. &quot;What's a Hickslaw?&quot; Dean asks, genuinely curious at what he has misheard. &quot;No, no. Hicks. Law. Loosely, the more choices you have, the longer it takes to choose&quot; Lucas rushes to inform Dean. &quot;Right&quot; Dean quickly replies, nodding as he realizes what Lucas said. &quot;but isn't it also true that the more often you are faced with the same choices, your response becomes faster?&quot; Dean continues. &quot;ah...yeah...yeah that's also true&quot; Lucas adds, realizing yet again Dean may be guiding Lucas towards an outcome beyond his blindspot. A silence forms again, broken this time by Dean when he continues &quot;...so if that's true, then, applying it to what's in your head right now, could it also be true that you're so busy thinking through so many different decisions that you're not focusing enough on the smaller set that really impacts you?&quot;</p>
+<p>Lost for words, in a different way now, Lucas sighs and slumps a little on the bench. His mind seamlessly switched from Dean's original ask, to processing this far more challenging question. Am I being too shallow in my assessments? Is Dean giving subtle feedback on my performance? What does <em>really</em> impact me? Lucas' mind again begins melting into a soup of over analysis and inaction. &quot;So, how can I help?&quot; Dean says, interrupting the silent swirl of Lucas' mind before it goes too far again.</p>
+<p>&quot;I...I think I need some time to think about that&quot; Lucas cautiously tells Dean. &quot;Great, I can help with that...why don't you take a week off and see where you're at after that, or if you need more time&quot; Dean offers. &quot;That sounds great, but I am saving my holidays for later this year - Jeanine and I are going on our first skiing trip together - so I can't use up my vacation now&quot; Lucas explains. &quot;This won't be vacation time Lucas&quot; Dean informs, &quot;...you need to take sick leave&quot;.</p>
+<p>Lucas tingles with a wave of shock, confusion, and concern for his career. Lucas rarely takes sick days and his annual vacation balance usually only shrinks every few years when Jeanine suggests one big trip. At the start of his career, Lucas saved his vacation hours to cash-in at a higher salary level when he changed companies. Since he has stayed at the same company for a few years now his salary is roughly the same, he hasn't had the payout, and nor has he taken the rest that regular vacations offer. Working at a company with an &quot;unlimited vacation&quot; policy, it turned out, really only normalized over-working among the over-achieving types the job attracted. Dean's offer, nay instruction, was a stark constrast to how Lucas thought of time off.</p>
+<p>&quot;You're going to need to trust me on this Lucas. I know it isn't a decision you would consider, much less make, so think of this as a growth opportunity to try learn a different way to operate&quot; Dean says as he stands to stretch and head back to the office. &quot;Yes, okay, I can try this&quot; Lucas replies, rising to his feet as well. &quot;Great, I heard a yes...so then you know what I'm going to ask next right?&quot; Dean prompts. &quot;Right...'yes to this, then no to what else?'&quot; Lucas recites, showing he realizes the familiar formula Dean uses for their 1:1's. &quot;Right&quot; Dean smirks.</p>
+<p>&quot;Well, if I'm going to be away for a week...then..everything?&quot; Lucas half heartedly says. &quot;Try again&quot; Dean sternly responds, his tone an abrupt contrast to the previous empathetic instruction to take leave. Realizing the naievity of his initial response, Lucas scrambles &quot;well I can ask whoever is next oncall to pick-up the tasks I assigned to myself after my oncall shift last week&quot;. &quot;Right...what else?&quot; Dean prompts. &quot;Well...I can ask Li to start on-boarding the last new hire that starts on Monday&quot;. &quot;Right...what else?&quot; Dean challenges Lucas again, knowing Lucas' plate is still far from empty. Lucas takes advantage of the break in conversation that the noise of a passing truck provides to consider his options, however he knows there is only one right answer.</p>
+<p>&quot;I need someone to finish the design for the two notification services by the end of next week to keep our deadline&quot; Lucas admits, realizing how perpostorous it would have been to have tried to finalise these after a week out of the office. &quot;I will ask Li to pick those up&quot;. &quot;...ask Michael to take one, Li the other. You choose which&quot; Dean instructs as they round the final corner to the office. Lucas can't hold back his surprise and asks &quot;two engineers? Isn't that overkill?&quot;. &quot;Why? Two designs is two engineers work&quot; Dean tells him. &quot;Just because <em>you</em> have been doing both, and more, doesn't make it less&quot;.</p>
+<p>Lucas, not fully convinvced by what Dean has told him, reserves his words as they badge back in to the office and head to the elevator bay. &quot;So...what was...&quot; Dean begins &quot;...most useful?&quot; Lucas interrupts, finishing Dean's sentence. &quot;Well...all of it. But if I have to be specific..&quot; Lucas pauses. &quot;You do&quot;, Dean half interrupts, with a smirk. The elevator door opens, two levels below their own for another employee to exit. &quot;Well?&quot; he asks, as he steps out, leaving Lucas alone in the elevator, aware that the closing doors will force a response without the overthinking. &quot;You helped me see that...I'm burnt out&quot;. The door closes and Lucas ascends to the level his desk is on. He shuffles towards his desk, with the words of his realization echoing in his mind. &quot;I'm not burning out, I'm burnt out&quot; he reiterates to himself.</p>
+<p>Come 5pm, Lucas has met with Li and Michael and excitedly told them about the opportunity they have to design these new services. In the near distance he can hear their conversation abuzz with excitement from being asked to own parts of the design that they have until now only curiously watched Lucas put together. Lucas also finds time to delegate the followup operational tasks to Swami; who adds her own suggestions based on what she learned from presenting at the Ops review meeting in Lucas' absence.</p>
+<p>Lucas closes the lid on his laptop and heads for the door. A sense of guilt at dropping more work on his team clouds his initial feeling of relief for the coming days away from the office. Back at home, he makes his way through the house dropping off his jacket and keys, and Jeanine excitedly welcomes the news that he is taking time off. &quot;That's a really smart idea; you need it, you have been like a zombie for weeks now&quot; she confides. Lucas is only somewhat shocked at her words. &quot;It's been really tough for both of us, so I'm so happy that you're doing something about it finally&quot; she adds, grabbing him in a smothering hug before he has time to drop his laptop bag. He knows it hasn't been easy for either of them, but this is the first time he has truly acknowledged the impact his choices have had on Jeanine too. Her embrace is somehow different tonight.</p>
+<p>The next morning Lucas awakes, alone in bed. He taps the smooth face of his smartwatch to check the time. Momentarily forgetting that he won't be heading to work on this rainy Friday morning, his heart races to see it is 11am! Lucas had not slept past 6:30 on a weekday since his time at university. He calms and heads to the kitchen where a note on the counter from Jeanine let's him know he is both loved, and alone for the next six hours. &quot;I'll just quickly check email and see if Li needs any help with that design&quot; he thinks, pulling out his laptop, and sipping a morning coffee while it boots. His efforts come to a halt when he discovers he cannot log in - his account has been locked out. He has no access to email, Slack, the annoying corporate browser, or in fact any connection to what is going on inside the company. His stomach sinks and his mind immediately races for answers, from extreme thoughts of being locked out for misuing sick days, to concerns his account has been compromised somehow. He grabs for his phone to message Dean to find out why, only to find there is a message waiting for him.</p>
+<p>The message from four hours ago reads &quot;I have asked IT to suspend your account, just so you aren't tempted to check in ;) Enjoy the rest and come back when you know you're ready&quot;. Dean is a step ahead again. The message calms Lucas for now; and he instead begins to reflect on why he was so quick to jump to extreme explanations for the lockout. He notices how he also had immediately started forming options for how to regain access once he realised he was locked out. Frustrated at his own reactions, he attempts to drown the thoughts of work in the coffee as he knows he should, but his mind keeps finding a way to bring him back to it each time he focuses on something new.</p>
+<p>Why were the extreme scenarios so quick to be acted on, but the more probable and less extreme options not pursued first? Had he learned to respond to extreme options first because of their potential impact, because of how often they were the root cause, or because of the mental reward that comes from solving more extreme scenarios? &quot;Only a cowboy shoots first and asks questions later&quot; he lectures himself. Had he become the cowboy engineer he so despised without realising? If so, when, and why? Each question lead to another, filling any momentary quiet and escape from the sense of urgency to find an answer. Day one of sick leave and he was already able to see a blindspot, one that must be so obvious to everyone else around him. Lucas' mind continued to replay scenarios from the last few months, trying to remember what he had considered at the time, and the actions he had taken. Again and again he saw the pattern: shoot first, ask questions later. Why was he handling so many situations this way? In hindsight, what could he have done differently? It was too soon to understand how or why he had become trained to think and act this way, but he knew he didn't want it to continue.</p>
+<p>Years earlier, Lucas had mentored a quiet intern at the start of the intern's career. The intern carried with them a pocketsize star wars themed notebook, distinctly separate and seemingly redundant from their laptop. On almost every occassion Lucas met with the intern in person the notebook would gain a half page of handwritten notes. At the end of the internship, Lucas's curiosity finally got the better of him and he asked what the notebook was for. Considering the intern also took notes, scrawled drawings, and added photos directly to organized notes on their laptop, the notebook seemed to be an unecessary burden to carry around. &quot;I use this to capture what I'm feeling, what I can't process about a situation in the moment, and what I need to understand later. The notebook is for me, not the company&quot; the intern taught him. At the time Lucas thought this idea was clever, but it never seemed to solve a problem he could see, so it never become a habit. Like many good habits, times were too good then to see the need for the habit. Now as he sat staring into an empty coffee cup, he realized this habit was exactly what he wanted to discover why he responded to situations the way he does, and how he might be able to change these responses to get a different outcome.</p>
+<p>Lucas pushes his cup across the bench towards the sink. He picks himself up from the stool he had been perched on at the kitchen bar and heads to the cabinet in the spare room to find his own version of the star wars notebook. The best he can rustle up is a corporate notebook abandoned after his new hire induction years before. &quot;Good enough...I can always add stickers I guess&quot; he tells the empty room. Sugar waits in the hallway peering through the door, ever curious at the opening of a door. </p>
+<p>Back at the kitchen bench Lucas begins writing about the rough night from earlier in the week. After a slow start, he begins writing down what he felt during the times he was paged. Frustration; from being impacted by careless decisions of others. Exhaustion; from sleep deprevation and guilt from inflicting it on Jeanine as well. Hopelessness; despite implementing so many technical improvements the operational load was only marginally better than months earlier. Shame; that he missed his opportunity at the ops review meeting, is falling behind on his more important goals for the year, and by pushing through it all, his manager needed to force an involuntary stop.</p>
+<p>&quot;ugggggh&quot; Lucas groans, realizing this isn't the first, or last time he will face these feelings unless he makes more changes. Ding. His phone informs of the arrival of a fresh email. &quot;I should turn these off&quot; he tells himself, but the title catches his eye and he finds himself reading further before he has time to act on that thought.</p>
+<p>What is in the email?</p>
+<ol>
+<li>A recruiter from a big company is impressed by Lucas's LinkedIn profile and would like to chat</li>
+<li>The email is from Li, he needs to chat with Lucas</li>
+<li>The email is from a local meetup group for software engineers Lucas used to attend</li>
+<li>Amazon spam for laptop deal? some distraction he doesn't need</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../adventure/start.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../adventure/focus_on_ops.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../adventure/start.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../adventure/focus_on_ops.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
