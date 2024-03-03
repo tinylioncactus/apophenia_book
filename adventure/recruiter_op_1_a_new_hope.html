@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Recruiter Op1 - A new hope - Software Apophenia</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A book of lessons from my time working in the software industry">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Choose your own adventure</li><li class="chapter-item expanded "><a href="../adventure/start.html"><strong aria-hidden="true">1.</strong> Start the adventure</a></li><li class="chapter-item expanded "><a href="../adventure/burntout.html"><strong aria-hidden="true">2.</strong> Burnt. Out.</a></li><li class="chapter-item expanded "><a href="../adventure/hero_mode.html"><strong aria-hidden="true">3.</strong> Hero mode</a></li><li class="chapter-item expanded "><a href="../adventure/focus_on_future.html"><strong aria-hidden="true">4.</strong> Focus on new development</a></li><li class="chapter-item expanded "><a href="../adventure/keep_on_keeping_the_lights_on.html"><strong aria-hidden="true">5.</strong> Keep on keeping the lights on</a></li><li class="chapter-item expanded "><a href="../adventure/recruiter_op_1_a_new_hope.html" class="active"><strong aria-hidden="true">6.</strong> Recruiter Op1 - A new hope</a></li><li class="chapter-item expanded "><a href="../adventure/recruiter_op_1_their_bar.html"><strong aria-hidden="true">7.</strong> Recruiter Op1 - Their bar</a></li><li class="chapter-item expanded "><a href="../adventure/recruiter_op_1_a_yes_of_sorts.html"><strong aria-hidden="true">8.</strong> Recruiter Op1 - A yes, of sorts</a></li><li class="chapter-item expanded "><a href="../adventure/recruiter_op_1_a_no_of_sorts.html"><strong aria-hidden="true">9.</strong> Recruiter Op1 - A no, of sorts</a></li><li class="chapter-item expanded "><a href="../adventure/recruiter_op_1_time_to_move.html"><strong aria-hidden="true">10.</strong> Recruiter Op1 - Time to move on</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Definitions</li><li class="chapter-item expanded "><a href="../definitions/summary.html"><strong aria-hidden="true">11.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Coaching and Mentoring</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> Speak the same lingo and become predictable</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> Get Shit Done</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> Understand the business</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> Make things better</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> Lookout!</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> Grit</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> Meta</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">20.</strong> Software</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Scratch</li><li class="chapter-item expanded "><a href="../dragons.html"><strong aria-hidden="true">21.</strong> Here be dragons 🐲</a></li><li class="chapter-item expanded "><a href="../mudmap.html"><strong aria-hidden="true">22.</strong> Mud map</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">23.</strong> Research material</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Software Apophenia</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="a-new-hope"><a class="header" href="#a-new-hope">A new hope</a></h1>
+<p>&quot;Hi Lucas. I'm very impressed with your profile and would like to talk to you about an exciting new opportunity at Bluetech&quot;. Lucas eyes light up and he's immediately aware his heart beat has increased. Lucas deeply admires Bluetech. Frequently they had been sponsors of the tech conferences he has wanted to attend (if only he could convince the business to let him). Lucas has read so many of their engineering blogs and listened to hours of their recorded conference sessions. Bluetech might not have existed when he was a schoolboy, but his career dream has always been to work for a tech industry leader - and they certainly tick that box.</p>
+<p>&quot;If you'd like to take the next step, please reserve a spot in my shared calendar using the link below. I look forward to meeting you! Best, Miranda&quot; the brief email concludes. Lucas previews the link to be sure this it isn't a scam. Satisfied the email is legitimate, he follows the link to book a spot with the recruiter without hesitation. To his excitement, there are even times available today! Not wanting to be unprepared however, he settles on a slot in the following afternoon.</p>
+<p>The rest of the day does not turn out as he might have imagined, though considering there were no goals for the day to begin with, he has no complaints. The afternoon is spent scrolling through the marketing heavy Bluetech website, reading engineering blogs, comparing companies on levels.fyi, and writing down questions for the conversation. Classic Lucas; over-prepared. It is only when Jeanine arrives back mid-afternoon that the research ends and the kitchen clock catches up to reality.</p>
+<p>When the time comes for the chat with the recruiter the next day, Lucas excitedly joins the Zoom call five minutes early. Miranda is not as punctual, but when she does her enthusiasm rivals that of Lucas. She describes the role and how her team had found his profile while looking through the contacts of existing engineers. Lucas had heard of other teams at his company being enticed to share their LinkedIn contacts over a <em>free</em> pizza lunch in the office. Seems like it was more common than he realised.</p>
+<p>After listening to Lucas give a brief summary of his career, Miranda asks for salary expectations. Lucas knew not to share what he is already earning yet, and instead shares the modest range he determined from the afternoon of research the day before. A moment of nerves hits Lucas - talking financial arrangements is not his strong suit and he doesn't want to lose this opportunity over salary expectations. Miranda - evidently more experienced at these conversations - assures him the range is very achievable and goes on to detail the interview process. &quot;First you will need to pass a coding exam - a few simple questions you can do as a take home exam. It will only take a couple of hours&quot; she informs. &quot;Ok, that seems reasonable&quot; Lucas agrees.</p>
+<p>&quot;If you pass, then your first round will be two one hour coding interviews with two of the senior engineers&quot; Miranda pauses. &quot;Ok...&quot; Lucas agrees while making notes in his notebook. &quot;Then the second round will be two more interviews; a system design meeting and a team values interview...&quot; she says before adding &quot;And the third round will be a company fit meeting with a bar raiser from another part of the business&quot;. Lucas waits to be sure there isn't a fourth round to be detailed. &quot;Ok...sounds fairly normal&quot; he replies. &quot;Yes very normal and you will have plenty of time to ask questions to each of your interviewers, so come prepared with all your questions for them&quot; she explains, seemingly wanting to divert from engaging in Q&amp;A right now. &quot;I'll send you a link to apply for this role and the link for the online coding exam after this call. How does that sound Lucas?&quot; Miranda asks, again signalling her eagerness for the call to end. &quot;That sounds fine&quot; he replies and the call ends in a final optimistically polite exchange. </p>
+<p>Later that afternoon, Lucas tells Jeanine about the call as she unpacks her bag on the kitchen counter. &quot;A coding exam and five interviews?&quot; she asks with a slightly shocked tone in her voice. &quot;Yeah...it's quite a bit isn't it? It's normal though at these big companies&quot; he explains, trying not to sound as if he is defending a process he is not fully comfortable with himself. &quot;I've wanted to work at a place like this for a long time though...the kind of problems their engineers solve is rare to find anywhere else&quot; he adds; with excitement for the opportunity clear in his voice. It is not lost on Jeanine, though she continues to unpack while carrying on with the conversation.  &quot;Well...good...I'm sure you'll do great, and I'm happy if you're doing what makes you excited about your career again&quot; she says supportively. &quot;Thanks Jeany&quot; Lucas says through a thick smile.</p>
+<p>At university Lucas aced his Data Structures and Algorithms courses, but it has been many years and multiple professional jobs since he graduated. The need to invert a binary tree or implement Dijkstra's algorithm had strangely never presented itself in his professional career. Later that evening, Lucas sits alone in their living room after Jeanine has gone to bed early. Not wanting to be too rusty for the interview loop, he signs up to leetcode.com to get in a few practice questions before he will attempt the coding exam tomorrow. The coding challenges surprise him initially - it takes a certain mindset and a lot less rust to answer these. In fact Lucas instead spends the next few nights solving challenges to build back his confidence for handling the textbook style riddles. It is Saturday afternoon before Lucas locks himself in his home office and attempts the Bluetech coding exam. The exam is easier than he has built it up to be in his mind, but requires the full two hours as promised by Miranda. A few days later he and Miranda are exchanging emails to arrange times for the first round of interviews. Lucas feels relieved to be past the first hurdle, and his decision to freshen up on leetcode questions was validated.</p>
+<p>&quot;Monday afternoon for both works fine&quot; Lucas confirms to Miranda's suggestion for the first round. Fine is an exaggeration - Lucas knows he will need to extend his leave from work, albeit by a day. Though he feels a cringe of guilt for deceiving his team, he knows there will never be a convenient time for his current employer for Lucas to build his career beyond what they can offer. On Monday night, after nailing both interviews, Lucas again feels validated for choosing to invest in his development. Jeanine patiently listens to his enthusiastic retelling of the questions he was asked - though most of it is as confusing to her to decipher as a mechanic detailing the parts needed to fix a squeaky wheel. &quot;That's great!&quot; she exclaims, &quot;So when will you take the next round?&quot;.</p>
+<p>&quot;I'd take them now if I could!&quot; Lucas confidently proclaims, &quot;but I'll have to arrange more time off&quot; he says with a sigh. &quot;Why the frown? Jeanine asks. &quot;Well I just had a week off, and now an extra day...if I take another day off so soon, don't you think it will start to raise questions as work?&quot; he says, baring his fear and guilt to Jeanine. &quot;Well...do you have to take a day off? Can you just work from home one afternoon?&quot; she proposes. &quot;Yes! That's a great idea...I can just work an hour later to make it up...good one Jeany!&quot; he says with the excitement again smeared across his face. Jeanine flashes an encouraging smile and disappears into the back of the house.</p>
+<p>On Wednesday night, after round two, Lucas' enthusiasm is more subdued. &quot;The values meeting was fine - I could talk about a lot of situations that the interviewer asked about.&quot; he tells Jeanine. &quot;So why the long face Mr Ed? Did you bomb the other one...what was it...interface design?&quot; she asks, her intentional misstatement aimed at brightening Lucas outlook. &quot;System Design&quot; Lucas replies disapprovingly yet playful, tilting his head and slightly rolling his eyes at Jeanine's joke. Jeanine pokes her tongue out at Lucas then takes a sip of her wine.</p>
+<p>&quot;It wasn't my best work...but I did eventually solve the problem&quot; he says. &quot;So...you're not happy it wasn't perfect?&quot; Jeanine enquires. &quot;It was enough...but at the end of the interview, when I asked a few questions...the role sounded a bit different than what the recruiter described to me&quot; he tells. &quot;Oh...&quot; Jeanine pauses, &quot;In what way? What did you ask?&quot;. &quot;Well, I asked about how much time is spent between coding, support work, meetings; how many interviews they give each week...the usual stuff, you know.&quot; he pauses, then adds &quot;...well their oncall is a 12 hour shift, 4 days in a week, including weekends, once a month&quot;. Jeanines eyebrows raise as she waits to hear more.</p>
+<p>&quot;Three or four interviews a week on average. Textbook scrum...so not a lot of meetings, just a lot of ceremonies&quot; he quips. &quot;What's the difference?&quot; Jeanine legitimately asks. &quot;Not much if you aren't building anything&quot; Lucas says. &quot;Righhhht...four interviews a week? You said there are thousands of engineers at this company...&quot; Jeanine starts, before Lucas interrupts to add &quot;More than one hundred thousand&quot;. Jeanine continues, &quot;...right, so if every engineer is giving four interviews a week...how have they not hired half the planet?&quot; she quizzes. &quot;Yeah, exactly. Either only a few meet their bar, or only a few want to keep working there&quot; Lucas replies, his eyes lowering as he ponders alternative explanations.</p>
+<p>Jeanine takes another sip of her wine as the two sit side by side at the kitchen bench and share a moment of silent reflection. Eventually Jeanine breaks the silence to ask Lucas what he intends to do.</p>
+<ol>
+<li><a href="/adventure/recruiter_op_1_their_bar.html">Continue with the interview loop - may as well find out whether he meets the bar</a></li>
+<li><a href="/adventure/recruiter_op_1_im_out.html">Decline to continue - trust instincts, do it 100% or not at all</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../adventure/keep_on_keeping_the_lights_on.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../adventure/recruiter_op_1_their_bar.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../adventure/keep_on_keeping_the_lights_on.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../adventure/recruiter_op_1_their_bar.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
